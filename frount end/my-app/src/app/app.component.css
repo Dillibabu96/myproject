@@ -1,0 +1,28 @@
+div{
+    display: flex;
+    gap: 20px;
+}
+form{
+    margin: 40px;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 400px;
+    padding: 10px;
+    background-color: rgb(217, 217, 235);
+    
+}
+#student{
+    display: flex;
+    justify-content: row;
+}
+.button{
+    display: flex;
+    justify-content: right;
+}
+
+
+::ng-deep .mat-mdc-raised-button.mat-accent {
+    --mdc-protected-button-container-color: #40ffa6;
+    --mdc-protected-button-label-text-color: #fff;
+}
+

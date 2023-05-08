@@ -1,0 +1,48 @@
+ <table mat-table [dataSource]="studentList" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+     
+      <ng-container matColumnDef="stName">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.stName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="course">
+        <th mat-header-cell *matHeaderCellDef> Course </th>
+        <td mat-cell *matCellDef="let element"> {{element.course}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="fees">
+        <th mat-header-cell *matHeaderCellDef> Fees </th>
+        <td mat-cell *matCellDef="let element"> {{element.fees}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Sex">
+        <th mat-header-cell *matHeaderCellDef> SEX </th>
+        <td mat-cell *matCellDef="let element">{{element.Sex}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element">
+          <div class="example-button-row">
+            <div class="fa fa-edit fa-2x" style="color:rgb(18, 19, 18) !important;" (click)="openDialog(element.id)"></div>
+            <div class="fa fa-trash-o fa-2x" style="color:red !important;" (click)="ondelete(element.id)"></div></div> </td>
+      </ng-container>
+
+     
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+ </table>
+
+    <div id="but">
+        <button  mat-raised-button color="accent" (click) ="add()" >Add</button>
+    </div>
+
+
+    

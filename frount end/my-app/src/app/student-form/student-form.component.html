@@ -1,0 +1,29 @@
+<div id="flex">
+  <form class="example-form" [formGroup]="studentForm">
+    <label for="name">Name</label>
+    <mat-form-field class="example-full-width">
+      <input matInput  formControlName="Name">
+    </mat-form-field>
+    <br>
+    <label for="course">Course</label>
+    <mat-form-field class="example-full-width">
+      <input matInput  formControlName="Course">
+    </mat-form-field>
+    <br>
+    <label for="fees">Fees</label>
+    <mat-form-field class="example-full-width">
+      <input matInput  formControlName="Fees">
+    </mat-form-field>
+    <br>
+    <label for="Sex">Sex</label>
+    <select id="Sex" formControlName="Sex" >
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select><br><br>
+   <div id ='bt'>
+    <button  mat-raised-button color="primary" type="submit" [disabled]="!studentForm.valid" (click) = "closeDialog(studentForm.value)" >submit</button>
+    <button  mat-raised-button color="warn"   mat-dialog-close  >Cancel</button>
+   </div>
+  </form>
+    
+</div>

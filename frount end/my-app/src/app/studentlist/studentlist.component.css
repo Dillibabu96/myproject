@@ -1,0 +1,10 @@
+ #but{
+    display: flex !important;
+    justify-content: center ;
+    align-items: center;
+}
+.example-button-row{
+    display: flex;
+    gap: 10px
+}
+
